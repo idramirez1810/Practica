@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+
+<body>
+    <script>
+        var mayor = 0;
+        var cant;
+        cant = prompt('INGRESE LA CANTIDAD DE NUMEROS:');
+        var numeros = [cant];
+        for (var i = 0; i < cant; i++) {
+            numeros[i] = prompt('Ingrese un numero:');
+            numeros[i] = parseInt(numeros[i]);    //hasta que no vi la grabacion no me salia el ejercicio, ya que se sobreescribia el 10 con el 9, poniendo al 9 como mayor en una prueba que hacia del ejercicio.
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+            //PARA VER COMO SE ESTA GUARDANDO EL MAYOR
+            document.write('DE MOMENTO MAYOR ES: ' + mayor);
+            document.write('<br>');
+        }
+        //LO AGREGO PARA VER LOS NUMEROS INGRESADOS
+        for (var j = 0; j < cant; j++) {
+            document.write('Numero Ingresado: ' + numeros[j]);
+            document.write('<br>');
+        }
+        document.write('EL NUMERO MAYOR ES: ' + mayor);
+
+    </script>
+</body>
+
+</html>

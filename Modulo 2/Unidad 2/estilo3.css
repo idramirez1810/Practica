@@ -1,0 +1,30 @@
+.contenedor {
+    border: 2px solid black;
+    width: 1350 px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+.caja{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;/*NO ME ESTARIA SALIENDO CENTRAR LAS CAJAS AL PRINCIPIO Y FINAL DEL CONTENEDOR*/
+}
+.item1{
+    background-color: red;
+    color: white;;
+}
+.item2{
+    background-color: blue;
+    color: white;
+}
+.item3{
+    background-color: green;
+    color: white;
+}

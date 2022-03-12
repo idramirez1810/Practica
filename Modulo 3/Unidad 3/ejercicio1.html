@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <script>
+        var respuesta;
+
+        respuesta=prompt('Ingrese la distancia a recorrer:','');
+        if(0<=respuesta && respuesta<1000)
+        {
+            document.write('Caminar');
+        }
+        else if(1000<=respuesta && respuesta<10000)
+        {
+            document.write('Bicicleta');
+        }
+        else if(10000<=respuesta && respuesta<30000)
+        {
+            document.write('Colectivo');
+        }
+        else if(30000<=respuesta && respuesta<100000)
+        {
+            document.write('Auto');
+        }
+        else if(100000<=respuesta )
+        {
+            document.write('Avión');
+        }
+        else{
+            document.write('No Valido');
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

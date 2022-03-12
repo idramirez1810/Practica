@@ -1,0 +1,49 @@
+.env
+MYSQL_HOST=localhost
+MYSQL_DB_NAME=ejercicio 
+MYSQL_USER=root
+MYSQL_PASSWORD=
+
+bd.js
+var mysql = require('mysql');
+var util = require('util');
+var pool = mysql.createPool({
+    connectionLimit: 10,
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DB_NAME
+});
+pool.query = util.promisify(pool.query);
+module.exports = pool;
+
+app.js
+//linea 7
+require('dotenv').config();
+var pool = require('./models/bd.js');
+//linea 28
+//Select
+pool.query('select * from empleados').then(function(resultados){
+  console.log(resultados)
+});
+//Insert   
+var obj={
+  nombre:'Juan',
+  apellido:'Lopez',
+  trabajo:'Docente',
+  edad: 38,
+  salario: 1500,
+  mail: 'juanlopez@gmail.com'
+}
+pool.query('insert into empleados set ?', [obj]).then(function(resultados){
+  console.log(resultados)
+});
+//Update
+var id=1;
+var obj={
+  nombre:'Pablo',
+  apellido:'Gomez'
+}
+pool.query('update empleados set ? where id_emp=?',[obj],id).then(function(resultados){
+  console.log(resultados);
+});

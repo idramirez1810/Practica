@@ -1,0 +1,44 @@
+h1{
+   background-color: cadetblue;
+   text-align: center;
+   color: crimson; 
+   font-family: cursive;
+}
+h3{
+    color: darkcyan;
+    font-size: large;
+    font-family: cursive;
+}
+ul{
+    color: crimson;
+    font-size: 18px;
+}
+p{
+    color: crimson;
+    font-style: italic;
+    font-size: 18px;
+}
+.caja
+{
+    background: #0c6cfc;
+    background: linear-gradient(0deg,#0c6cfc 0%, #00a3ff 20%);
+    background: -webkit-linear-gradient(0deg,#0c6cfc 0%, #00a3ff 20%);
+    background: -moz-linear-gradient(0deg,#0c6cfc 0%, #00a3ff 20%);
+    box-shadow: 10px 10px 35px blue;
+    margin-bottom: 40px;
+}
+.caja2
+{
+    background-color: cornflowerblue;
+    width: 230px;
+    height: 210px;
+    border-radius: 5%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 40px; ;
+}
+.texto
+{
+    column-count: 3;
+    background-color: cornflowerblue;
+}
